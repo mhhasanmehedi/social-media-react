@@ -1,10 +1,9 @@
-import React from "react";
-import { AccessAlarm } from "@mui/icons-material";
+import TopBar from "../../components/TopBar/TopBar";
 
 const Home = () => {
   return (
     <div>
-      <AccessAlarm />
+      <TopBar />
     </div>
   );
 };
