@@ -1,3 +1,4 @@
+import { Posts } from "../../dummyData";
 import Post from "../Post/Post";
 import Share from "../Share/Share";
 import "./Feed.css";
@@ -7,15 +8,9 @@ const Feed = () => {
     <div className="feed">
       <div className="feedWrapper">
         <Share />
-        <Post img="1" />
-        <Post img="2" />
-        <Post img="3" />
-        <Post img="4" />
-        <Post img="5" />
-        <Post img="6" />
-        <Post img="7" />
-        <Post img="8" />
-        <Post img="9" />
+        {Posts.map((post) => (
+          <Post post={post} key={post.id} />
+        ))}
       </div>
     </div>
   );

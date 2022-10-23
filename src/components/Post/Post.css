@@ -21,8 +21,8 @@
 }
 
 .postProfileImg {
-  height: 32px;
-  width: 32px;
+  height: 42px;
+  width: 42px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -38,15 +38,15 @@
 }
 
 .postTopRight {
-  height: 30px;
-  width: 30px;
+  height: 35px;
+  width: 35px;
   border-radius: 50%;
   background-color: rgb(226, 226, 226);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: rgb(61, 58, 58);
+  color: rgb(129, 126, 126);
 }
 
 .postCenter {
@@ -86,9 +86,6 @@
 
 .postLikeCounter {
   font-size: 15px;
-}
-
-.postBottomRight {
 }
 
 .postCommentText {

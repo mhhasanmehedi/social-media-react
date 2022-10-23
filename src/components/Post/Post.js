@@ -1,41 +1,39 @@
 import { MoreVert } from "@mui/icons-material";
+import { Users } from "../../dummyData";
 import "./Post.css";
 
-const Post = ({ img }) => {
+const Post = ({ post }) => {
+  const { date, comment, like, photo, userId, desc } = post;
+
+  const user = Users.filter((usr) => usr.id === userId);
+  const { profilePicture, username } = user[0];
+
   return (
     <div className="post">
       <div className="postWrapper">
         <div className="postTop">
           <div className="postTopLeft">
-            <img
-              className="postProfileImg"
-              src={`/assets/person/${img}.jpeg`}
-              alt="Person"
-            />
-            <span className="postUserName">Mehedi Hasan</span>
-            <span className="postDate">5 mins ago</span>
+            <img className="postProfileImg" src={profilePicture} alt="Person" />
+            <span className="postUserName">{username}</span>
+            <span className="postDate">{date}</span>
           </div>
           <div className="postTopRight">
             <MoreVert />
           </div>
         </div>
         <div className="postCenter">
-          <span className="postText">Hey! Its my first post :)</span>
+          <span className="postText">{desc && desc}</span>
 
-          <img
-            className="postImg"
-            src={`/assets/person/${img}.jpeg`}
-            alt="Person"
-          />
+          <img className="postImg" src={photo} alt="Person" />
         </div>
         <div className="postBottom">
           <div className="postBottomLeft">
             <img className="likeIcon" src="/assets/like.png" alt="Like" />
             <img className="likeIcon" src="/assets/heart.png" alt="Heart" />
-            <span className="postLikeCounter">32 people like it</span>
+            <span className="postLikeCounter">{like} people like it</span>
           </div>
           <div className="postBottomRight">
-            <span className="postCommentText">9 comments</span>
+            <span className="postCommentText">{comment} comments</span>
           </div>
         </div>
       </div>
