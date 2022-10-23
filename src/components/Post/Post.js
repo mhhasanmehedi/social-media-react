@@ -6,7 +6,7 @@ import "./Post.css";
 const Post = ({ post }) => {
   const [react, setReact] = useState(post.like);
   const [isReact, setIsReact] = useState(false);
-  const { date, comment, like, photo, userId, desc } = post;
+  const { date, comment, photo, userId, desc } = post;
   const user = Users.filter((usr) => usr.id === userId);
   const { profilePicture, username } = user[0];
 
